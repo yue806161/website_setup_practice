@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta charset="UTF-8">
+    <title>庫存查詢</title>
+</head>
+<body>
+    <h1>庫存查詢</h1>
+    <!-- 顶部固定的框框 -->
+    <nav>
+        <ul >
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="shipping.html">出貨管理</a></li>
+            <li><a href="inventory.html">庫存查詢</a></li>
+            <li><a href="orders.html">訂單紀錄</a></li>
+        </ul>
+    </nav>
+
+    <input type="text" id="inventorySearch" name="inventorySearch" placeholder="搜索庫存...">
+    <select name="category" id="category">
+        <option value="all">所有類別</option>
+        <option value="corporateProduct">公司產品</option>
+        <option value="productAccessory">產品配件</option>
+        <option value="electronicComponent">電子元件</option>
+        <option value="refrigeratorInventory">冰箱庫存</option>
+      </select>
+
+    <h2>當前庫存</h2>
+    <table>
+        <tr>
+            <th>產品名稱</th>
+            <th>數量</th>
+        </tr>
+        <!-- 库存项目的行会在这里 -->
+    </table>
+
+
+</body>
+</html>

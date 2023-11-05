@@ -1,0 +1,108 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: #333333; /* 主要文字顏色 */
+    font-family: Arial, sans-serif; /* 字體 */
+    min-height: 1300px;
+  }
+  
+  h1 {
+    position: relative; /* 或者 absolute, 根據需求 */
+    left: 200px; /* 如果要向左移動，應該是負值 */
+  }
+  
+  nav, main, footer, .button, a {
+    pointer-events: auto;
+  }
+  
+  /* 導航菜單的樣式 */
+  nav {
+    position: relative; /* 或者 absolute, 根據需求 */
+    top: 15px;
+    background-color: #e0e0e0; /* 淺灰色背景 */
+    padding: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none; /* 移除列表標記 */
+    padding: 0; /* 移除內距 */
+    margin: 0; /* 添加移除外距 */
+    display: flex; /* 使用 flex 布局 */
+    flex-wrap: wrap; /* 允許元素換行 */
+  }
+  
+  nav ul li {
+    margin-right: 30px; /* 列表項目之間的距離 */
+  }
+  
+  nav ul li a {
+    color: #0077CC; /* 鏈接文字顏色 */
+    text-decoration: none; /* 移除下劃線 */
+    text-transform: uppercase; /* 文字大寫 */
+  }
+  
+  /* 按鈕樣式 */
+  .button {
+    background-color: #f58634; /* 橘色背景 */
+    color: #ffffff; /* 文字白色 */
+    padding: 10px 20px; /* 上下10px，左右20px的內距 */
+    text-decoration: none; /* 移除下劃線 */
+    display: inline-block; /* 使其像行內元素一樣對齊，但仍然保持塊級元素的特性 */
+    margin: 4px 2px; /* 外距 */
+    cursor: pointer; /* 鼠標懸停時顯示指針形狀 */
+    border: none; /* 移除邊框 */
+    border-radius: 5px; /* 邊框圓角 */
+  }
+  
+  /* 表格樣式 */
+  table {
+    width: 100%; /* 表格寬度 */
+    border-collapse: collapse; /* 移除表格間距 */
+  }
+  
+  th, td {
+    text-align: left; /* 文字對齊方式 */
+    padding: 8px; /* 內距 */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* 偶數行背景顏色 */
+  }
+  
+  th {
+    background-color: #0077CC; /* 表頭背景顏色，稍微淺一點的藍色 */
+    color: white; /* 表頭文字白色 */
+  }
+  
+  /* 報表和庫存資料區塊的基本樣式 */
+  .reports, .inventory-data, .inventory-overview, .latest-orders, .quick-navigation {
+    background-color: rgba(245, 134, 52, 0.8); /* 背景色 */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+/* 響應式設計 */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+/* 卡片樣式 */
+.card {
+    background: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    height: 100px;
+    margin: 1rem;
+    position: relative;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}

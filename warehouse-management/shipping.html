@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta charset="UTF-8">
+    <title>出貨管理</title>
+</head>
+<body>
+    <h1>出貨管理</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="shipping.html">出貨管理</a></li>
+            <li><a href="inventory.html">庫存查詢</a></li>
+            <li><a href="orders.html">訂單紀錄</a></li>
+        </ul>
+    </nav>
+
+    <h2>創建出貨單</h2>
+    <form>
+        <label for="product-name">產品名稱:</label>
+        <input type="text" id="product-name" name="product-name"><br><br>
+        
+        <label for="quantity">數量:</label>
+        <input type="number" id="quantity" name="quantity" min="1"><br><br>
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
