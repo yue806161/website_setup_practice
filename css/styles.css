@@ -1,0 +1,24 @@
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* 將下拉選單放在觸發元素的底部 */
+  left: 0;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto; /* 添加滾動條以防內容過多 */
+}
+.main-content {
+  margin-left: 280px; /* 與.sidebar寬度相同的左邊距，防止內容被覆蓋 */
+  padding: 1rem; /* 增加一些內邊距 */
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-card:hover {
+  transform: scale(1.05);
+}

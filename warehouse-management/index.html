@@ -1,97 +1,269 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>倉庫管理系統</title>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <header>
-        <h1>倉儲管理系統</h1>
-        <header class="p-3 mb-3 border-bottom">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="d-flex flex-row">
+      <nav
+        class="sidebar d-flex flex-column p-3 text-bg-dark"
+        style="width: 280px"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+        >
+          <svg class="bi pe-none me-2" width="40" height="32">
+            <use href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4">LOGO</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link active" aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#home"></use>
+              </svg>
+              首頁
+            </a>
+          </li>
+          <li>
+            <a href="./inventory.html" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#speedometer2"></use>
+              </svg>
+              庫存管理
+            </a>
+          </li>
+          <li>
+            <a href="./orders.html" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#table"></use>
+              </svg>
+              訂單管理
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#grid"></use>
+              </svg>
+              出貨管理
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#people-circle"></use>
+              </svg>
+              維修紀錄
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#people-circle"></use>
+              </svg>
+              產品BOM表
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#people-circle"></use>
+              </svg>
+              電子元件庫存
+            </a>
+          </li>
+        </ul>
+        <hr />
+
+        <div class="dropdown">
+          <a
+            href="#"
+            class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="/mylove_profile.jpg"
+              alt=""
+              width="32"
+              height="32"
+              class="rounded-circle me-2"
+            />
+            <strong>USER</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main-content flex-grow-1 p-3">
+        <!-- 通知中心 -->
+        <div class="notification-center mb-4">
+          <h2>通知中心</h2>
+          <div></div>
+          <h2>用戶自定義面板</h2>
+          <div class="custom-templates">
             <div class="container">
-              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                  <svg class="bi me-2" width="40" height="32" role="img" aria-label="啟動" _mstaria-label="138918" _mstHash="36"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-        
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="#" class="nav-link px-2 link-secondary" _msttexthash="6290102" _msthash="37">首頁</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4637321" _msthash="38">庫存管理</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4749446" _msthash="39">訂單管理</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4985214" _msthash="40">出貨管理</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4985214" _msthash="40">維修紀錄</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4985214" _msthash="40">產品BOM表</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4985214" _msthash="40">電子元件庫存</a></li>
-                  <li><a href="#" class="nav-link px-2 link-body-emphasis" _msttexthash="4985214" _msthash="40">文件下載</a></li>
-                </ul>
-        
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                  <input type="search" class="form-control" placeholder="搜索。。。" aria-label="搜索" _mstplaceholder="99723" _msthash="41" _mstaria-label="74607">
-                </form>
-        
-                <div class="dropdown text-end">
-                  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/mylove_profile.jpg" alt="用戶頭貼" width="32" height="32" class="rounded-circle" _mstalt="33306" _msthash="42">
-                  </a>
-                  <ul class="dropdown-menu text-small" _msthidden="4">
-                    <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="191724" _msthidden="1" _msthash="43">New project...</a></li>
-                    <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="117221" _msthidden="1" _msthash="44">Settings</a></li>
-                    <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="94315" _msthidden="1" _msthash="45">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="98553" _msthidden="1" _msthash="46">Sign out</a></li>
-                  </ul>
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  選擇您的模板
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                  >
+                    編輯
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <!-- 模板選項 1 -->
+                    <div class="col-md-4">
+                      <div
+                        class="card clickable-card"
+                        data-href="path/to/module1-function"
+                      >
+                        <div class="card-body">
+                          <h5 class="card-title">模塊1</h5>
+                          <p class="card-text">描述模塊1的功能。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 模板選項 2 -->
+                    <div class="col-md-4">
+                      <div
+                        class="card clickable-card"
+                        data-href="path/to/module1-function"
+                      >
+                        <div class="card-body">
+                          <h5 class="card-title">模塊2</h5>
+                          <p class="card-text">描述模塊2的功能。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 模板選項 3 -->
+                    <div class="col-md-4">
+                      <div
+                        class="card clickable-card"
+                        data-href="path/to/module1-function"
+                      >
+                        <div class="card-body">
+                          <h5 class="card-title">模塊3</h5>
+                          <p class="card-text">描述模塊3的功能。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </header>
-    </header>
+          </div>
+          <!-- 編輯模式的彈出視窗 -->
+          <div
+            class="modal fade"
+            id="editModal"
+            tabindex="-1"
+            aria-labelledby="editModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editModalLabel">編輯模板</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- 這裡放置編輯模塊的選項 -->
+                  <!-- 示例：選擇模塊功能的表單 -->
+                  <form>
+                    <!-- 表單元素，允許用戶選擇模塊功能 -->
+                    <!-- 重複以提供選項 -->
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    關閉
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    儲存設定
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <main>
-        <!-- 快速導航區域 -->
-        <section class="quick-navigation">
-            <h2>快速導航</h2>
-            <div class="card" id="add-order">新增訂單</div>
-            <div class="card" id="quick-inventory">快速庫存查詢</div>
-            <div class="card" id="quick-order">快速訂單查詢</div>
-            <div class="card" id="maintenance-record">維修紀錄查詢</div>
-            <div class="card" id="document-download">文件下載</div>
-        </section>
+        <!-- 快速導航 -->
+        <div class="quick-navigation mb-4">
+          <h2>快速導航</h2>
+          <!-- 表單類填寫 -->
+          <div class="form-navigation">
+            <!-- 具體內容或元件 -->
+          </div>
+        </div>
 
-        <!-- 庫存總覽區域 -->
-        <section class="inventory-oerview">
-            <h2>庫存總覽</h2>
-            <!-- 報表圖表的內容 -->
-        </section>
+        <!-- 概況報表 -->
+        <div class="overview-report mb-4">
+          <h2>概況報表</h2>
+          <!-- 月、出貨、訂單報表 -->
+          <div class="monthly-shipment-order-reports">
+            <!-- 具體內容或元件 -->
+          </div>
+        </div>
 
-        <!-- 最新訂單區域 -->
-        <section class="latest-orders">
-            <h2>最新訂單</h2>
-            <!-- 報表圖表的內容 -->
-        </section>
-
-        <!-- 報表展示區 -->
-        <section class="reports">
-            <h2>報表分析</h2>
-            <!-- 報表圖表的內容 -->
-        </section>
-
-        <!-- 維修紀錄展示區 -->
-        <section class="maintenance-record">
-            <h2>維修紀錄</h2>
-            <!-- 維修紀錄的內容 -->
-        </section>
-       
-         
-    </main>
+        <!-- 工作概況 -->
+        <div class="work-overview">
+          <h2>工作概況</h2>
+          <!-- 便條紙 -->
+          <div class="sticky-notes mb-2">
+            <!-- 具體內容或元件 -->
+          </div>
+          <!-- 待辦事項 -->
+          <div class="to-do-tasks">
+            <!-- 具體內容或元件 -->
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer>
-        <img src="/mylove.jpg" alt="mylove">
-        <p>內部系統，非外部使用。</p>
+      <p>內部系統，非外部使用。</p>
     </footer>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>
