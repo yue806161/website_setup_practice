@@ -14,6 +14,49 @@
   padding: 1rem; /* 增加一些內邊距 */
 }
 
+.notification-center {
+  position: fixed; /* 固定位置 */
+  top: 10px; /* 靠上 */
+  right: 10px; /* 靠右 */
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-center .icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.notification-center .bell-icon,
+.notification-center .settings-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#backToTopBtn {
+  background: #00d0ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px; /* 調整字體大小以適應圖標大小 */
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#backToTopBtn i {
+  font-size: 20px; /* 圖標的大小 */
+}
+
 .clickable-card {
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -21,4 +64,35 @@
 
 .clickable-card:hover {
   transform: scale(1.05);
+}
+
+.overview-report {
+  width: 100%;
+  overflow: hidden;
+}
+
+.charts-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* 確保圖表對齊 */
+}
+
+.charts-carousel::-webkit-scrollbar {
+  display: none; /* 隱藏滾動條 */
+}
+
+.charts-slide {
+  flex: 0 0 100%; /* 每個滑塊占滿容器的100% */
+  scroll-snap-align: start; /* 對齊滾動 */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+.chart-container {
+  width: 80%; /* 圖表寬度 */
+  min-width: 250px;
+  height: 200px;
+  background-color: #f2f2f2;
+  margin: 10px;
 }

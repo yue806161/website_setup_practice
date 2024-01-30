@@ -3,7 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cards.forEach(function (card) {
     card.addEventListener("click", function () {
-      window.location.href = this.dataset.href;
+      var href = this.dataset.href;
+
+      if (href && href !== "#") {
+        window.location.href = href;
+      } else {
+        console.log("無效的鏈接或未設置鏈接");
+      }
     });
   });
 });
